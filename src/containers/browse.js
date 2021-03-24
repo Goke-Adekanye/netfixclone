@@ -27,7 +27,7 @@ export function BrowseContainer({ slides }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [profile.displayName]);
 
@@ -123,7 +123,7 @@ export function BrowseContainer({ slides }) {
             <Card.Title>{slideItem.title}</Card.Title>
             {/* Card Entities */}
             <Card.Entities>
-              {slideItem.data.map((item) => (
+              {slideItem?.data?.map((item) => (
                 <Card.Item key={item.docId} item={item}>
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
